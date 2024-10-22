@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    background-color: #F1EFEE;
+    font-family: Arial, sans-serif;
+}
+
+.PanelP {
+    position: relative;
+    width: calc(80% - 20px);
+    height: calc(100% - 20px);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    overflow: auto;
+}
+
+.input-container {
+    display: flex; /* Utiliza flexbox para la alineación */
+    justify-content: space-between; /* Espacia los elementos a los extremos */
+    align-items: center; 
+}
+
+.input-container input[type="text"] {
+    width: 70%; /* Puedes ajustar el porcentaje según lo necesites */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+}
+
+.Container {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #F1EFEE;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 500px; 
+    float: left; 
+}
+
+.Container2 {
+    position: absolute;
+    bottom: 10px;
+    width: calc(100% - 60px);
+    left: 50%;
+    transform: translateX(-52%);
+    margin: 20px;
+    padding: 20px;
+    background-color: #F1EFEE;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], 
+textarea, 
+select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 16px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: #EF7158;
+    color: hsl(0 0 100%);
+    box-shadow: rgb(0, 0, 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    letter-spacing: 3px;
+    background-color: #EF7158;
+    color: hsl(0 0 100%);
+    box-shadow: #EF7158 0px 7px 29px 0px;
+}
+
+button:active{
+    letter-spacing: 3px;
+    background-color: #FBD178;
+    color: hsl(0 0 100%);
+    box-shadow: #FBD178 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+#TablaD {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#TablaD th, 
+#TablaD td {
+    border: 1px solid #F1EFEE;
+    padding: 8px;
+    text-align: center;
+    color: #AB988D;
+}
+
+#TablaD th {
+    background-color: #E5E0DD;
+}
+
+#TablaD td {
+    color: #B19E94;
+}
