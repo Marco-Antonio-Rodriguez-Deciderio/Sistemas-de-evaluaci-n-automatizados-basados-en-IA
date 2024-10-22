@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 88vh;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar:hover{
+    box-shadow: none;
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count{
+    background-color: var(--color-danger);
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+body {
+    background-color: #F1EFEE;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #EF7158;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tab:hover {
+    background-color: #FBD178;
+}
+
+label {
+    font-size: 14px;
+    color: #4A403B;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.nombre {
+    padding: 10px;
+    background-color: #EFEFF1;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.tarea-info textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    background-color: #FAFAFB;
+}
+
+.tarea-grade-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.grade-icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.grade input {
+    padding: 10px;
+    width: 80px;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #FAFAFB;
+    font-size: 16px;
+    color: #4A4A4A;
+}
+
+.icon img {
+    width: 70px;
+    height: 70px;
+    background-color: #F2F4F6;
+}
+
+.observations textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    background-color: #FAFAFB;
+}

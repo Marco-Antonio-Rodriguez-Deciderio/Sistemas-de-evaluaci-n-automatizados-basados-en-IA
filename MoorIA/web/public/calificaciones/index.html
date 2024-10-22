@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Archivo de estilos generales -->
+    <link rel="stylesheet" href="calificaciones.css"> <!-- Estilos específicos de calificaciones -->
+    <title>Calificaciones</title>
+
+    <style>
+        /* Estilos adicionales para ajustar el layout del dashboard */
+        body {
+            margin: 0;
+            display: flex;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        aside {
+            width: 250px;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .sidebar a.active {
+            background-color: #4CAF50;
+        }
+
+        main {
+            margin-left: 250px; /* Para que el contenido principal no se superponga con la barra lateral */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container2 {
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ajustes adicionales para el contenido de calificaciones */
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .student-info, .tarea-grade-icon, .observations {
+            margin-bottom: 15px;
+        }
+
+        .grade-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .grade {
+            margin-left: 20px;
+        }
+
+        .grade input {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sección de la barra lateral (sidebar) -->
+        <aside>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <h2><span class="danger">Calificaciones</span></h2>
+            </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>History</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Calificaciones</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>Tickets</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Sale List</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">add</span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal (centrado en el dashboard) -->
+        <main>
+            <div class="container2">
+                <div class="tabs">
+                    <button class="tab">Alex Garcia</button>
+                    <button class="tab">Axel</button>
+                    <button class="tab">Omar</button>
+                    <button class="tab">Sophie</button>
+                    <button class="tab">Adanae Rivero</button>
+                    <button class="tab">Marco Deciderio</button>
+                </div>
+
+                <div class="student-info">
+                    <label for="nombre">Nombre Completo:</label>
+                    <div class="nombre" id="nombre">Nombre del Alumno</div>
+                </div>
+
+                <div class="tarea-grade-icon">
+                    <div class="tarea-info">
+                        <label for="tarea">Descripción de la tarea:</label>
+                        <textarea id="tarea" rows="5" cols="70" disabled>
+                            Descripción de la tarea.
+                        </textarea>
+                    </div>
+                    <div class="grade-icon">
+                        <div class="icon">
+                            <img src="image.png" alt="Icono">
+                        </div>
+                        <div class="grade">
+                            <label for="calificacion">Calificación:</label>
+                            <input type="text" id="calificacion" value="95" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="observations">
+                    <label for="observaciones">Observaciones de  la IA:</label>
+                    <textarea id="observaciones" rows="5" cols="60" disabled>
+                        Aquí aparecerán las observaciones generadas automáticamente por la IA.
+                    </textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="orders.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
