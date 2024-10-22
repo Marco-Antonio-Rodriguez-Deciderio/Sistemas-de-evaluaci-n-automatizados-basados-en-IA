@@ -138,8 +138,8 @@ aside .toggle .logo{
 }
 
 aside .toggle .logo img{
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 3rem;
 }
 
 aside .toggle .close{
@@ -158,6 +158,7 @@ aside .sidebar{
     top: 1.5rem;
     transition: all 0.3s ease;
 }
+
 
 aside .sidebar:hover{
     box-shadow: none;
