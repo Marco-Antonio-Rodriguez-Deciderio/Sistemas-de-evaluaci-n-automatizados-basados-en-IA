@@ -2,7 +2,7 @@
 
 :root{
     --color-primary: #6C9BCF;
-    --color-danger: #FF0060;
+    --color-danger: #EF7158;
     --color-success: #1B9C85;
     --color-warning: #F7D060;
     --color-white: #fff;
@@ -66,10 +66,17 @@ img{
     object-fit: cover;
 }
 
-h1{
-    font-weight: 800;
-    font-size: 1.8rem;
+h1 {
+    font-weight: 100;
+    font-size: 1.2rem; 
 }
+
+h5 {
+    font-weight: 800;
+    font-size: 1.0rem; 
+}
+
+
 
 h2{
     font-weight: 600;
@@ -77,7 +84,7 @@ h2{
 }
 
 h3{
-    font-weight: 500;
+    font-weight: 100;
     font-size: 0.87rem;
 }
 
@@ -123,7 +130,7 @@ b{
 
 aside{
     height: 100vh;
-}
+}   
 
 aside .toggle{
     display: flex;
@@ -138,8 +145,8 @@ aside .toggle .logo{
 }
 
 aside .toggle .logo img{
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 3rem;
 }
 
 aside .toggle .close{
@@ -163,7 +170,7 @@ aside .sidebar:hover{
     box-shadow: none;
 }
 
-aside .sidebar a{
+aside .sidebar a {
     display: flex;
     align-items: center;
     color: var(--color-info-dark);
@@ -171,8 +178,9 @@ aside .sidebar a{
     gap: 1rem;
     position: relative;
     margin-left: 2rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Mantener la transición */
 }
+
 
 aside .sidebar a span{
     font-size: 1.6rem;
@@ -185,18 +193,23 @@ aside .sidebar a:last-child{
     width: 100%;
 }
 
-aside .sidebar a.active{
+aside .sidebar a.active {
     width: 100%;
     color: var(--color-primary);
     background-color: var(--color-light);
     margin-left: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones */
 }
 
-aside .sidebar a.active::before{
+
+aside .sidebar a.active::before {
     content: '';
     width: 6px;
     height: 18px;
     background-color: var(--color-primary);
+    position: absolute;
+    left: 0;
+    transition: width 0.3s ease;
 }
 
 aside .sidebar a.active span{
@@ -204,8 +217,10 @@ aside .sidebar a.active span{
     margin-left: calc(1rem - 3px);
 }
 
-aside .sidebar a:hover{
+
+aside .sidebar a:hover {
     color: var(--color-primary);
+    background-color: var(--color-light-hover); /* Si quieres cambiar también el fondo al hacer hover */
 }
 
 aside .sidebar a:hover span{
@@ -222,6 +237,7 @@ aside .sidebar .message-count{
 
 main{
     margin-top: 1.4rem;
+    transition: opacity 0.5s ease;
 }
 
 main .analyse{
@@ -477,17 +493,45 @@ main .recent-orders a{
     border-radius: 50%;
 }
 
-.right-section .reminders .notification{
+.right-section .reminders .notification {
     background-color: var(--color-white);
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto esté centrado */
     gap: 1rem;
     margin-bottom: 0.7rem;
-    padding: 1.4rem var(--card-padding);
+    padding: var(--card-padding);
     border-radius: var(--border-radius-2);
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: all 0.3s ease;
+
+    /* Fija el tamaño del recuadro */
+    width: 250px; /* Ajusta este valor según lo que necesites */
+    height: 200px; /* Fija la altura para que no cambie */
+}
+
+
+.right-section .reminders .notification .content {
+    display: flex;
+    flex-direction: column; /* Alinea el día y el mes en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    width: 100%;
+    height: 100%;
+}
+
+.date-day {
+    font-size: 6rem; /* Tamaño grande para el día */
+    font-weight: bold;
+    margin: 0;
+}
+
+.date-month {
+    font-size: 2.5rem; /* Tamaño más pequeño para el mes */
+    color: var(--color-grey); /* Ajuste de color */
+    margin: -20px;
 }
 
 .right-section .reminders .notification:hover{
