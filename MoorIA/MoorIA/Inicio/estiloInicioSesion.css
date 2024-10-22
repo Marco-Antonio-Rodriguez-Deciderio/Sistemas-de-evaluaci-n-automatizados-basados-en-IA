@@ -8,8 +8,8 @@
 }
 
 body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: #AB988D;
+    background: linear-gradient(to right, #e2e2e2, #AB988D);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@ body{
 }
 
 .container button{
-    background-color: #512da8;
+    background-color: #4A403B;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -128,21 +128,6 @@ body{
     }
 }
 
-.social-icons{
-    margin: 20px 0;
-}
-
-.social-icons a{
-    border: 1px solid #ccc;
-    border-radius: 20%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 3px;
-    width: 40px;
-    height: 40px;
-}
-
 .toggle-container{
     position: absolute;
     top: 0;
@@ -161,9 +146,9 @@ body{
 }
 
 .toggle{
-    background-color: #512da8;
+    background-color: #4A403B;
     height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
+    background: linear-gradient(to right, #AB988D, #4A403B);
     color: #fff;
     position: relative;
     left: -100%;
