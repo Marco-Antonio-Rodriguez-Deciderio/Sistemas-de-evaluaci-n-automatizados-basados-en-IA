@@ -46,7 +46,7 @@
         }
 
         main {
-            margin-left: 250px; /* Para que el contenido principal no se superponga con la barra lateral */
+            margin-left: 250px;
             flex: 1;
             display: flex;
             justify-content: center;
@@ -70,7 +70,9 @@
             margin-bottom: 20px;
         }
 
-        .student-info, .tarea-grade-icon, .observations {
+        .student-info,
+        .tarea-grade-icon,
+        .observations {
             margin-bottom: 15px;
         }
 
@@ -84,7 +86,7 @@
         }
 
         .grade input {
-            width: 50px;
+            width: 100px;
             text-align: center;
         }
     </style>
@@ -96,7 +98,7 @@
         <aside>
             <div class="logo">
                 <img src="images/logo.png" alt="Logo">
-                <h2><span class="danger">Calificaciones</span></h2>
+                <h2>MOOR<span class="danger">IA</span></h2>
             </div>
 
             <div class="sidebar">
@@ -146,47 +148,53 @@
 
         <!-- Contenido principal (centrado en el dashboard) -->
         <main>
-            <div class="container2">
-                <div class="tabs">
-                    <button class="tab">Alex Garcia</button>
-                    <button class="tab">Axel</button>
-                    <button class="tab">Omar</button>
-                    <button class="tab">Sophie</button>
-                    <button class="tab">Adanae Rivero</button>
-                    <button class="tab">Marco Deciderio</button>
-                </div>
 
-                <div class="student-info">
-                    <label for="nombre">Nombre Completo:</label>
-                    <div class="nombre" id="nombre">Nombre del Alumno</div>
-                </div>
 
-                <div class="tarea-grade-icon">
-                    <div class="tarea-info">
-                        <label for="tarea">Descripción de la tarea:</label>
-                        <textarea id="tarea" rows="5" cols="70" disabled>
+
+    <div class="container2">
+        <h1>CALIFICACIONES</h1> <!-- Mover aquí el título -->
+        <br>
+
+        <div class="tabs">
+            <button class="tab">Alex Garcia</button>
+            <button class="tab">Axel</button>
+            <button class="tab">Omar</button>
+            <button class="tab">Sophie</button>
+            <button class="tab">Adanae Rivero</button>
+            <button class="tab">Marco Deciderio</button>
+        </div>
+
+        <div class="student-info">
+            <label for="nombre">Nombre Completo:</label>
+            <div class="nombre" id="nombre">Nombre del Alumno</div>
+        </div>
+
+        <div class="tarea-grade-icon">
+            <div class="tarea-info">
+                <label for="tarea">Descripción de la tarea:</label>
+                <textarea id="tarea" rows="5" cols="70" disabled>
                             Descripción de la tarea.
                         </textarea>
-                    </div>
-                    <div class="grade-icon">
-                        <div class="icon">
-                            <img src="image.png" alt="Icono">
-                        </div>
-                        <div class="grade">
-                            <label for="calificacion">Calificación:</label>
-                            <input type="text" id="calificacion" value="95" disabled>
-                        </div>
-                    </div>
+            </div>
+            <div class="grade-icon">
+                <div class="icon">
+                    <img src="image.png" alt="Icono">
                 </div>
-
-                <div class="observations">
-                    <label for="observaciones">Observaciones de  la IA:</label>
-                    <textarea id="observaciones" rows="5" cols="60" disabled>
-                        Aquí aparecerán las observaciones generadas automáticamente por la IA.
-                    </textarea>
+                <div class="grade">
+                    <label for="calificacion">Calificación:</label>
+                    <input type="text" id="calificacion" value="95" disabled>
                 </div>
             </div>
-        </main>
+        </div>
+
+        <div class="observations">
+            <label for="observaciones">Observaciones de la IA:</label>
+            <textarea id="observaciones" rows="5" cols="60" disabled>
+                        Aquí aparecerán las observaciones generadas automáticamente por la IA.
+                    </textarea>
+        </div>
+    </div>
+    </main>
     </div>
 
     <script src="orders.js"></script>
