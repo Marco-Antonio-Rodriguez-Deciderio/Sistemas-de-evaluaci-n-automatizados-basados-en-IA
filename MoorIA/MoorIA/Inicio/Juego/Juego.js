@@ -1,5 +1,6 @@
 const Area_Juego = document.querySelector(".AreaJuego");
 const Puntu_acion = document.querySelector(".Puntuacion");
+const Mejor_Puntaje=document.querySelector(".HS");
 
 let perdio = false;
 let comidaX, comidaY;
@@ -10,7 +11,10 @@ let velocidadX = 0,
   velocidadY = 0;
 let ponerIntervalo;
 let puntaje=0;
+
+//obtener la puntuacion mas alta de nuestra memoria
 let mejorpuntaje=localStorage.getItem("high-score") || 0;
+Mejor_Puntaje.innerText=`Mejor Puntación: ${mejorpuntaje}`;
 
 const Aviso = () => {
   //limpia el tiempo y actualiza la página
@@ -47,12 +51,16 @@ const iniciarJuego = () => {
   if (perdio) return Aviso();
 
   let htmlMarkup = `<div class="comida" style="grid-area: ${comidaY} / ${comidaX}"></div>`;
+  //saber si la serpiente comio la comida
   if (serpienteX === comidaX && serpienteY === comidaY) {
     cambiarLugarComida();
     Cuerposerpiente.push([comidaX, comidaY]);
     //console.log(Cuerposerpiente);
     puntaje++;
+    mejorpuntaje=puntaje>=mejorpuntaje ? puntaje : mejorpuntaje;
+    localStorage.setItem("high-score", mejorpuntaje);
     Puntu_acion.innerText=`Puntuación: ${puntaje}`;
+    Mejor_Puntaje.innerText=`Mejor Puntuación: ${mejorpuntaje}`;
   }
 
   for (let i = Cuerposerpiente.length - 1; i > 0; i--) {
