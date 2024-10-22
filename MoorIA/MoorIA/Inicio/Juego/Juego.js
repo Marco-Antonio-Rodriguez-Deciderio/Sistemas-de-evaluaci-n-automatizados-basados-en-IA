@@ -1,6 +1,7 @@
 const Area_Juego = document.querySelector(".AreaJuego");
 const Puntu_acion = document.querySelector(".Puntuacion");
 const Mejor_Puntaje=document.querySelector(".HS");
+const controles=document.querySelectorAll(".controles i");
 
 let perdio = false;
 let comidaX, comidaY;
@@ -41,9 +42,13 @@ const cambiarDireccion = (e) => {
   iniciarJuego();
 };
 
+controles.forEach(key => {
+  key.addEventListener("click",()=>cambiarDireccion({key:key.dataset.key}));
+});
+
 const cambiarLugarComida = () => {
-  comidaX = Math.floor(Math.random() * 30) + 1;
-  comidaY = Math.floor(Math.random() * 30) + 1;
+  comidaX = Math.floor(Math.random() * 15) + 1;
+  comidaY = Math.floor(Math.random() * 15) + 1;
 };
 
 const iniciarJuego = () => {
@@ -76,9 +81,9 @@ const iniciarJuego = () => {
   //saber si la serpiente tocó el límite
   if (
     serpienteX <= 0 ||
-    serpienteX > 30 ||
+    serpienteX > 15 ||
     serpienteY <= 0 ||
-    serpienteY > 30
+    serpienteY > 15
   ) {
     perdio = true;
   }
@@ -99,5 +104,5 @@ const iniciarJuego = () => {
 };
 
 cambiarLugarComida();
-ponerIntervalo = setInterval(iniciarJuego, 125);
+ponerIntervalo = setInterval(iniciarJuego, 150);
 document.addEventListener("keydown", cambiarDireccion);
