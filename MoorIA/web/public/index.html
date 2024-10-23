@@ -3,57 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoorIA</title>
+    <title>Moor IA | Página de Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="src/img/ico.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div class="auth-container">
-        <div class="form-container" id="formContainer">
-            <!-- Login Form -->
-            <div id="loginForm">
-                <h2>Iniciar Sesión</h2>
-                <form id="loginFormElement">
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Contraseña</label>
-                        <input type="password" name="password" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Iniciar Sesión</button>
-                </form>
-            </div>
-
-            <!-- Register Form -->
-            <div id="registerForm" class="hide">
-                <h2>Registrarse</h2>
-                <form id="registerFormElement">
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Contraseña</label>
-                        <input type="password" name="password" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Registrarse</button>
-                </form>
-            </div>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Crear Cuenta</h1>
+                <!--
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>o regístrate con una cuenta</span>
+                -->
+                <input type="text" placeholder="Nombre(s)">
+                <input type="text" placeholder="Apellido Materno">
+                <input type="text" placeholder="Apellido Paterno">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Contraseña">
+                <button>Crear</button>
+            </form>
         </div>
-
-        <div class="switch-container" id="switchContainer">
-            <h2 id="switchTitle">¿Eres nuevo aquí?</h2>
-            <p id="switchText">Regístrate para crear una cuenta</p>
-            <button class="switch-btn" id="switchButton">Registrarse</button>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Inicia Sesión</h1>
+                <!--
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                
+                <span>inicia sesión con una cuenta</span>
+                -->
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Contraseña">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button>Vamoooos</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Inicia sesión</h1>
+                    <p>¡Qué bueno verte de nuevo!</p>
+                    <button class="hidden" id="InicioS">Iniciar Sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>¡Regístrate!</h1>
+                    <p>Tienes que tener cuenta para entrar a Moor IA</p>
+                    <button class="hidden" id="Registro">Registrarse</button>
+                </div>
+            </div>
+            <div class="game-container hidden" id="gameContainer">
+                <h2>Juego de la Serpiente</h2>
+                <iframe src="Juego.html" width="600" height="400"></iframe>
+            </div>
         </div>
     </div>
 
+    <script src="js/bootstrap.bundle.min.js"></script>    
     <script src="scripts/main.js"></script>
 </body>
 </html>

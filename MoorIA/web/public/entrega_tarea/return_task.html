@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoorIA</title>
+    <link rel="icon" href="src/img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="return_task.css">
+</head>
+<body>
+    
+    <div class="content-tarea">
+        <div>
+            <h1>Tareas</h1>
+        </div>
+        <div class="div-btn-nueva-tarea div-shadow">
+            <button class="btn-nueva-tarea">Nueva tarea</button>
+            <img src="/MoorIA/web/public/src/img/plus.png"class="icono-grafica" style="padding: 0px; padding-right: 10px;">    
+        </div>  
+    </div>
+    <div class="tareas">
+        
+        <div class="tarea div-shadow">
+            <h1 class="h1-1">Tarea 1</h1>
+            <p class="descripcion-tarea">Reporte de investigación</p>
+            <img src="/public/src/img/bar-chart.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/public/src/img/pencil.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/public/src/img/eye.png" alt="estadisticas de tarea" class="icono-grafica btn-abrir-popup">
+            <p class="fecha-vencimiento">Fecha de vencimiento 20/10/2024</p>
+        </div>
+
+        <div class="tarea div-shadow">
+            <h1 class="h1-1">Tarea 2</h1>
+            <p class="descripcion-tarea">Avance de proyecto final</p>
+            <img src="/public/src/img/bar-chart.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/public/src/img/pencil.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/public/src/img/eye.png" alt="estadisticas de tarea" class="icono-grafica btn-abrir-popup">
+            <p class="fecha-vencimiento">Fecha de vencimiento 30/10/2024</p>
+        </div>
+
+        <div class="tarea div-shadow">
+            <h1 class="h1-1">Tarea 3</h1>
+            <p class="descripcion-tarea">Resumen</p>
+            <img src="/public/src/img/bar-chart.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/public/src/img/pencil.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/public/src/img/eye.png" alt="estadisticas de tarea" class="icono-grafica btn-abrir-popup">
+            <p class="fecha-vencimiento">Fecha de vencimiento 5/11/2024</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <div class="popup" id="popup">
+        <h2>Tareas recibidas</h2>
+
+        <div class="tarea-estudiante">
+            <div class="icono-estudiante ">
+                <img class="icono-grafica" src="/public/src/img/user.png">
+            </div>
+            <div class="descripcion-entrega-tarea">
+                <h2>Omar Uriel</h2>
+                <h2>Entregó: 12/10/2025</h2>
+                <h2>Calificación:  / 100</h2>
+                <img >
+            </div>
+        </div>
+
+        <button class="btn-cerrar-popup" id="btn-cerrar-popup">Cerrar</button>
+    </div>
+
+    
+</body>
+<script src="/public/entrega_tarea/popup.js"></script>
+</html>

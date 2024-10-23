@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="/Dashboard/style.css">
+    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+    <link rel="icon" href="src/img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="return_task.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="/MoorIA/web/logo.png">
+                    <h2>MOOR<span class="danger"> IA</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analitics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Users</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>History</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Tickets</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale List</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Dashboard</h1>
+            <!-- Dashboard -->
+            
+    <div class="content-tarea">
+        <div>
+            <h1>Tareas</h1>
+        </div>
+        <div class="div-btn-nueva-tarea div-shadow">
+            <button class="btn-nueva-tarea">Nueva tarea</button>
+            <img src="/MoorIA/web/public/src/img/plus.png"class="icono-grafica" style="padding: 0px; padding-right: 10px;">    
+        </div>  
+    </div>
+    <div class="tareas">
+        
+        <div class="tarea div-shadow">
+            <h1 class="h1-1">Tarea 1</h1>
+            <p class="descripcion-tarea">Reporte de investigación</p>
+            <img src="/MoorIA/web/public/src/img/bar-chart.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/MoorIA/web/public/src/img/pencil.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/MoorIA/web/public/src/img/eye.png" alt="estadisticas de tarea" class="icono-grafica btn-abrir-popup">
+            <p class="/MoorIA/webfecha-vencimiento">Fecha de vencimiento 20/10/2024</p>
+        </div>
+
+        <div class="tarea div-shadow">
+            <h1 class="h1-1">Tarea 2</h1>
+            <p class="descripcion-tarea">Avance de proyecto final</p>
+            <img src="/MoorIA/web/public/src/img/bar-chart.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/MoorIA/web/public/src/img/pencil.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/MoorIA/web/public/src/img/eye.png" alt="estadisticas de tarea" class="icono-grafica btn-abrir-popup">
+            <p class="fecha-vencimiento">Fecha de vencimiento 30/10/2024</p>
+        </div>
+
+        <div class="tarea div-shadow">
+            <h1 class="h1-1">Tarea 3</h1>
+            <p class="descripcion-tarea">Resumen</p>
+            <img src="/MoorIA/web/public/src/img/bar-chart.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/MoorIA/web/public/src/img/pencil.png" alt="estadisticas de tarea" class="icono-grafica">
+            <img src="/MoorIA/web/public/src/img/eye.png" alt="estadisticas de tarea" class="icono-grafica btn-abrir-popup">
+            <p class="fecha-vencimiento">Fecha de vencimiento 5/11/2024</p>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <div class="popup" id="popup">
+        <h2>Tareas recibidas</h2>
+
+        <div class="tarea-estudiante">
+            <div class="icono-estudiante ">
+                <img class="icono-grafica" src="/public/src/img/user.png">
+            </div>
+            <div class="descripcion-entrega-tarea">
+                <h2>Omar Uriel</h2>
+                <h2>Entregó: 12/10/2025</h2>
+                <h2>Calificación:  / 100</h2>
+                <img >
+            </div>
+        </div>
+
+        <button class="btn-cerrar-popup" id="btn-cerrar-popup">Cerrar</button>
+    </div>
+
+            <!-- End of Dashboard -->
+
+            <!-- New Users Section -->
+            <div class="new-users">
+                <h2>Maestros</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="images/profile-2.jpg">
+                        <h2>Mtro. Jack</h2>
+                        <p>Ofline</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-3.jpg">
+                        <h2>Mtro. Amir</h2>
+                        <p>Online</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/profile-4.jpg">
+                        <h2>Mtro. Ember</h2>
+                        <p>Ofline</p>
+                    </div>
+                    <div class="user">
+                        <img src="/MoorIA/web/public/src/img/Perfil.png">
+                        <h2>Mtro. More</h2>
+                        <p>Online</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Users Section -->
+
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Materias</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre de la materia</th>
+                            <th>codigo</th>
+                            <th>Estado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Reza</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="/MoorIA/web/public/src/img/Perfil.png">
+                    <h2>Nombre Del Alumno</h2>
+                    <p>Escuela</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Fecha</h2>
+                </div>
+                <div class="notification">
+                    <div class="content">
+                        <div class="info">
+                            <p id="day" class="date-day"></p>
+                            <p id="month" class="date-month"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="/Dashboard/orders.js"></script>
+    <script src="/Dashboard/index.js"></script>
+</body>
+<script src="/public/entrega_tarea/popup.js"></script>
+</html>

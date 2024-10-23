@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (section === 'Users') {
                 mainContent.innerHTML = `<h1>Usuarios</h1><p>Lista de usuarios...</p>`;
             } else if (section === 'Reports') {
-                mainContent.innerHTML = `<h1>Reportes</h1><p>Vista de reportes...</p>`;
+                window.location.href = '../MoorIA/web/public/entrega_tarea/entTar.html';
             } else {
                 mainContent.innerHTML = `<h1>${section}</h1><p>Contenido de ${section}...</p>`;
             }
