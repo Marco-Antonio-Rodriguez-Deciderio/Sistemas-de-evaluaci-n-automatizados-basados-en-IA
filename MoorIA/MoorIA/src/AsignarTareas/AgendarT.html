@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AgendarT.css">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Agendar Tareas</title>
+</head>
+
+<body>
+    <div class="PanelP">
+        <div class="input-container">
+            <input type="text" placeholder="Nombre">
+            <button type="button">Publicar</button>
+        </div>
+        <div class="Container">
+            <label>Materia </label>
+            <select id="opciones" name="opciones">
+                <option value="opcion1">Español</option>
+                <option value="opcion2">Matematicas</option>
+                <option value="opcion3">Historia</option>
+                <option value="opcion4">Geografia</option>
+                <option value="opcion4">Fisica</option>
+                <option value="opcion4">Formación Civica y Ética</option>
+            </select>
+            <div>
+                <label>Descripción: </label>
+                <textarea name="Descripción" id="Descripción"></textarea>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="container">
+                <div class="calendar">
+                    <div class="header">
+                        <div class="month"></div>
+                        <div class="btns">
+                            <div class="btn today-btn">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <div class="btn prev-btn">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="btn next-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weekdays">
+                        <div class="day">Sun</div>
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                    </div>
+                    <div class="days">
+                        <!-- lets add days using js -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="Container2" id="Tabla">
+            <table border="1" id="TablaD">
+                <tr>
+                    <td>Descripción</td>
+                    <td>Calificación</td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder=""></td>
+                    <td>
+                        <select id="opciones" name="opciones">
+                            <option value="opcion1">5</option>
+                            <option value="opcion2">6</option>
+                            <option value="opcion3">7</option>
+                            <option value="opcion4">8</option>
+                            <option value="opcion4">9</option>
+                            <option value="opcion4">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder=""></td>
+                    <td>
+                        <select id="opciones" name="opciones">
+                            <option value="opcion1">5</option>
+                            <option value="opcion2">6</option>
+                            <option value="opcion3">7</option>
+                            <option value="opcion4">8</option>
+                            <option value="opcion4">9</option>
+                            <option value="opcion4">10</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder=""></td>
+                    <td>
+                        <select id="opciones" name="opciones">
+                            <option value="opcion1">5</option>
+                            <option value="opcion2">6</option>
+                            <option value="opcion3">7</option>
+                            <option value="opcion4">8</option>
+                            <option value="opcion4">9</option>
+                            <option value="opcion4">10</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="AgendarT.js"></script>
+</body>
+
+</html>
